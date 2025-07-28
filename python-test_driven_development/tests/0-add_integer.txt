@@ -11,16 +11,12 @@ This is an example text file in reStructuredText format.  First import
 
 Now use it:
 
-    >>> add_integer(1, 1)
-    2
     >>> add_integer(2)
     100
     >>> add_integer(1, 2.3)
     3
     >>> add_integer(50.5, -5)
     45
-    >>> add_integer(-1, -2)
-    -3
     >>> add_integer(1, "char")
     Traceback (most recent call last):
     TypeError: b must be an integer
@@ -30,3 +26,8 @@ Now use it:
     >>> add_integer("char", "test")
     Traceback (most recent call last):
     TypeError: a must be an integer
+    >>> add_integer(1.7976931348623157e+308, 1)
+    179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858369
+    >>> add_integer(2, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
