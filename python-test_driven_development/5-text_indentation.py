@@ -10,14 +10,18 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     buffer = []
-    number_of_separators = 0
-    for char in text:
+    for char_idx, char in enumerate(text):
         if char == "." or char == "?" or char == ":":
-            number_of_separators += 1
             buffer.append(char)
             print("".join(buffer), end="")
             print("\n")
             buffer = []
+        elif char == " ":
+            if text[char_idx - 1] == "." or text[char_idx - 1] == "?" or \
+               text[char_idx - 1] == ":":
+                continue
+            else:
+                buffer.append(char)
         else:
             buffer.append(char)
 
