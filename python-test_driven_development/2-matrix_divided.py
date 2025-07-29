@@ -16,8 +16,8 @@ def matrix_divided(matrix, div):
     for row_idx in range(len(matrix)):
         len_matrix_rows.append(len(matrix[row_idx]))
         for col_idx in range(len(matrix[row_idx])):
-            if (isinstance(matrix[row_idx][col_idx], int) is False)
-            and (isinstance(matrix[row_idx][col_idx], float) is False):
+            if (isinstance(matrix[row_idx][col_idx], int) is False) and \
+               (isinstance(matrix[row_idx][col_idx], float) is False):
                 raise TypeError("matrix must be a matrix (list of lists) "
                                 "of integers/floats")
 
