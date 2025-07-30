@@ -17,12 +17,12 @@ try {
       });
 
       // generate the objet with key that match the students
-      let allUserId = [];
+      const allUserId = [];
       filteredStudents.forEach(student => {
         allUserId.push(student.userId);
       });
       const uniqueAllUserId = allUserId.filter((value, index, array) => array.indexOf(value) === index);
-      let objCount = {};
+      const objCount = {};
       for (let i = 0; i < uniqueAllUserId.length; i++) {
         // reduce by each student id, to count the completed tasks
         const studentCompletedTasks = filteredStudents.filter(student => student.userId === uniqueAllUserId[i]);
