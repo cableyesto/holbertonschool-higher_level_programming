@@ -16,9 +16,7 @@ try {
       const filteredResults = results.filter(movie => {
         const subStr = '18';
         const subArr = movie.characters.filter(str => str.includes(subStr));
-        if (subArr.length > 0) {
-          return movie;
-        }
+        return subArr.length > 0;
       });
       console.log(filteredResults.length);
     }
