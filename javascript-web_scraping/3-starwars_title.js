@@ -11,7 +11,7 @@ const options = {
 try {
   request(options, function (error, response, body) {
     if (!error) {
-      let bodyJSON = JSON.parse(body);
+      const bodyJSON = JSON.parse(body);
       console.log(bodyJSON.title);
     }
   });
