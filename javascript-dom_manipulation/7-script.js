@@ -21,7 +21,6 @@ response.then(movieArray => {
   movieArray.forEach(movie => {
     movieTitleArray.push(movie.title);
   });
-  console.log(movieTitleArray);
 
   movieTitleArray.forEach(title => {
     const li = document.createElement('li');
