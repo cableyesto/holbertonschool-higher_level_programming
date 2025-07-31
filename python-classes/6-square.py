@@ -28,7 +28,7 @@ class Square:
     @property
     def position(self):
         """Getter of the size private attribute"""
-        return self.__size
+        return self.__position
 
     @size.setter
     def position(self, value):
@@ -38,7 +38,7 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = value
+            self.__position = value
 
     def area(self):
         """Public method to calculate the area of square"""
